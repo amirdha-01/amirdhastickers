@@ -685,6 +685,20 @@ const AdminPortfolio = () => {
                       {isUploading ? "Uploading to Cloudinary..." : "Select an image from your computer (Max 10MB)"}
                     </p>
                     
+                    <div className="text-xs text-slate-500 mt-3">Or enter an image URL:</div>
+                    <Input
+                      id="imageUrl"
+                      type="url"
+                      placeholder="https://example.com/image.jpg"
+                      value={formData.image.startsWith('data:') || formData.image.includes('cloudinary') ? '' : formData.image}
+                      onChange={(e) => {
+                        setFormData({ ...formData, image: e.target.value });
+                        setImagePreview(e.target.value);
+                      }}
+                      className="mt-2"
+                      disabled={isUploading}
+                    />
+                    
                     {imagePreview && (
                       <div className="mt-3 relative">
                         <img
