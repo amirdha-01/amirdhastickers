@@ -11,7 +11,8 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "upload-samples": "node upload-samples.js"
+    "upload-samples": "node upload-samples.js",
+    "vercel-build": "vite build"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
