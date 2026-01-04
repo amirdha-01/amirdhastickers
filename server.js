@@ -66,7 +66,7 @@ app.post('/api/send-email', async (req, res) => {
 
         <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; color: #6b7280; font-size: 12px;">
           <p>This message was sent from the Amirdha Stickers contact form</p>
-          <p>Recipient: netcraftstudi01@gmail.com</p>
+          <p>Recipient: amirdhastickers@gmail.com</p>
           <p>Website: <a href="http://localhost:8080" style="color: #2563eb;">Amirdha Stickers</a></p>
         </div>
       </div>

@@ -72,7 +72,7 @@ const ContactSection = () => {
         title: "Failed to Send Message",
         description: errorMessage.includes('Backend server') 
           ? "Backend server is not running. Please contact support."
-          : "Please try again or contact us directly at netcraftstudi01@gmail.com",
+          : "Please try again or contact us directly at amirdhastickers@gmail.com",
         variant: "destructive",
       });
     } finally {
