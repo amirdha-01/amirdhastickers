@@ -32,7 +32,12 @@ const App = () => (
         <AnimatedBackground />
         {/* Floating WhatsApp button */}
         <FloatingWhatsApp />
-        <BrowserRouter>
+        <BrowserRouter
+          future={{
+            v7_startTransition: true,
+            v7_relativeSplatPath: true,
+          }}
+        >
           {/* Scroll to top on route change */}
           <ScrollToTop />
           <Routes>
