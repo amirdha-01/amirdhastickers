@@ -158,6 +158,14 @@ const Footer = () => {
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
+                <Phone className="w-5 h-5 text-blue-500 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12" />
+                <span>+91 98946 59664</span>
+              </motion.li>
+              <motion.li 
+                className="flex items-center gap-3 text-slate-400 transition-colors duration-300 hover:text-white text-sm group"
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <Mail className="w-5 h-5 text-blue-500 flex-shrink-0 transition-transform duration-300 group-hover:rotate-12" />
                 <span className="break-all">amirdhastickers@gmail.com</span>
               </motion.li>
