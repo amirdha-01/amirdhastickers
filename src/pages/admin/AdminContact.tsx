@@ -20,7 +20,7 @@ const AdminContact = () => {
   const { toast } = useToast();
   const [contactInfo, setContactInfo] = useState<ContactInfo>({
     email: "amirdhastickers@gmail.com",
-    phone: "8667423787",
+    phone: "8667423787 / 9894659664",
     address: "No 1, Duraiswamy Nagar, Goldwins, Coimbatore - 641014, Tamil Nadu",
   });
 
