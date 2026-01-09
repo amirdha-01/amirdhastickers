@@ -14,14 +14,21 @@ export default defineConfig(({ mode }) => ({
       'localhost',
     ],
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [
+    react({
+      jsxRuntime: 'automatic',
+    }),
+    mode === "development" && componentTagger(),
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
   build: {
+    minify: 'terser',
     chunkSizeWarningLimit: 1000,
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -30,5 +37,8 @@ export default defineConfig(({ mode }) => ({
         },
       },
     },
+  },
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(mode === 'production' ? 'production' : 'development'),
   },
 }));
