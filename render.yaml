@@ -4,7 +4,7 @@ services:
     env: node
     region: singapore # Change to your preferred region (oregon, frankfurt, singapore, etc.)
     plan: free # or starter
-    buildCommand: npm install && npm run build
+    buildCommand: NODE_ENV=production npm install && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
@@ -13,4 +13,3 @@ services:
         sync: false
       - key: GMAIL_APP_PASSWORD
         sync: false
-    buildCommand: NODE_ENV=production npm install && npm run build
