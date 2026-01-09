@@ -119,8 +119,13 @@ app.get('/api/health', (req, res) => {
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Serve the frontend for all other routes (SPA fallback)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+app.use((req, res, next) => {
+  // Only serve index.html for GET requests that aren't API calls
+  if (req.method === 'GET' && !req.path.startsWith('/api')) {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  } else {
+    next();
+  }
 });
 
 app.listen(PORT, () => {
