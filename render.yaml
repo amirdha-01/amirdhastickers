@@ -4,8 +4,8 @@ services:
     env: node
     region: singapore # Change to your preferred region (oregon, frankfurt, singapore, etc.)
     plan: free # or starter
-    buildCommand: NODE_ENV=production npm install && npm run build
-    startCommand: npm run dev:full
+    buildCommand: npm install && npm run build
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
