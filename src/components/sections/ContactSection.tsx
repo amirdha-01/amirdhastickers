@@ -36,8 +36,8 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Use relative path for production, localhost for development
-      const apiUrl = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? 'http://localhost:3001' : '');
+      // In production (built app), use relative path. In dev, use separate server.
+      const apiUrl = import.meta.env.DEV ? 'http://localhost:3001' : '';
       
       const response = await fetch(`${apiUrl}/api/send-email`, {
         method: 'POST',
