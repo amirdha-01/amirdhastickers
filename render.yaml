@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: amirdha-stickers
+    env: node
+    region: singapore # Change to your preferred region (oregon, frankfurt, singapore, etc.)
+    plan: free # or starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GMAIL_USER
+        sync: false
+      - key: GMAIL_APP_PASSWORD
+        sync: false
