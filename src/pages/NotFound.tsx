@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const NotFound = () => {
@@ -18,9 +18,9 @@ const NotFound = () => {
       <div className="text-center relative z-10">
         <h1 className="mb-4 text-6xl md:text-8xl font-bold text-slate-900 animate-bounce">404</h1>
         <p className="mb-4 text-xl md:text-2xl text-slate-600 animate-fade-in-up">Oops! Page not found</p>
-        <a href="/" className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 hover:shadow-lg no-underline">
+        <Link to="/" className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 hover:shadow-lg no-underline">
           ← Return to Home
-        </a>
+        </Link>
       </div>
     </div>
   );
