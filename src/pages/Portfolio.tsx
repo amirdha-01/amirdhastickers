@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -267,11 +268,11 @@ const Portfolio = () => {
                 <p className="text-lg text-slate-600 mb-8">
                   Let's create something amazing together.
                 </p>
-                <a href="/contact">
+                <Link to="/contact">
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                     Start Your Project
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           </section>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useStickerStore } from "@/store/stickerStore";
 import StickerCard from "@/components/stickers/StickerCard";
 import { Button } from "@/components/ui/button";
@@ -41,11 +42,11 @@ const GallerySection = () => {
         )}
 
         <div className="text-center mt-10 sm:mt-12 md:mt-16 lg:mt-20 fade-in-up delay-300 px-4 sm:px-6">
-          <a href="/contact" className="transition-smooth hover-lift inline-block w-full sm:w-auto">
+          <Link to="/contact" className="transition-smooth hover-lift inline-block w-full sm:w-auto">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-2xl text-sm sm:text-base md:text-lg px-6 sm:px-7 md:px-8 w-full sm:w-auto h-12 sm:h-12 md:h-14">
               Request Custom Design
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

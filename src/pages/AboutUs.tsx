@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -131,16 +132,16 @@ const AboutUs = () => {
                   Explore our product collection or create your custom design today.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="/products">
+                  <Link to="/products">
                     <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                       Shop Products
                     </Button>
-                  </a>
-                  <a href="/contact">
+                  </Link>
+                  <Link to="/contact">
                     <Button variant="outline" size="lg">
                       Contact Us
                     </Button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

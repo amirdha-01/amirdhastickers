@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { useStickerStore } from "@/store/stickerStore";
@@ -57,11 +58,11 @@ const Products = () => {
                   <p className="text-slate-600 text-lg mb-8">
                     No products available yet. Check back soon!
                   </p>
-                  <a href="/contact">
+                  <Link to="/contact">
                     <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                       Request Custom Design
                     </Button>
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
@@ -80,11 +81,11 @@ const Products = () => {
                 <p className="text-lg text-slate-600 mb-8">
                   We offer custom design services to bring your unique ideas to life.
                 </p>
-                <a href="/contact">
+                <Link to="/contact">
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                     Request Custom Design
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           </section>
